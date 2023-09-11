@@ -1,11 +1,18 @@
 <script >
+import AppHeader from './components/AppHeader.vue';
 export default {
-  //LOGIC HERE...
+  components: { AppHeader }
 };
 </script>
 
 <template>
-  <h1 class="text-center mt-5 ">Hello world!</h1>
+  <!--HEADER:-->
+  <AppHeader />
+
+
+  <main class="container">
+    <h1 class="text-center mt-5 ">Hello world!</h1>
+  </main>
 </template>
 
 <style>
