@@ -2,17 +2,10 @@
 import axios from 'axios';
 const endpoint = 'http://localhost:8000/api/projects/';
 import AppHeader from './components/AppHeader.vue';
+import AppCard from './components/AppCard.vue';
+
 export default {
-  components: { AppHeader },
-  data: () => ({ projects: [] }),
-  methods: {
-    fetchProjects() {
-      axios.get(endpoint).then(res => { this.projects = res.data })
-    }
-  },
-  created() {
-    this.fetchProjects();
-  }
+  components: { AppHeader, AppCard }
 };
 </script>
 
@@ -22,8 +15,8 @@ export default {
 
   <!--MAIN:-->
   <main class="container pt-3">
-    <ul>
-      <li v-for="project in projects" :key="project.id">{{ project.title }}</li>
+    <ul class="d-flex justify-content-center align-items-center gap-3 ">
+      <AppCard />
     </ul>
   </main>
 </template>
@@ -36,6 +29,12 @@ export default {
 /*Pseudo-classes*/
 
 /*Generics*/
+ul li {
+  list-style-type: none;
+}
 
 /*Utilties*/
+.card {
+  height: 430px;
+}
 </style>
