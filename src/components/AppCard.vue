@@ -17,7 +17,7 @@ export default {
 <template>
     <li v-for="project in projects" :key="project.id">
         <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            <img :src="project.thumb" class="card-img-top" :alt="project.title">
             <div class="card-body">
                 <h5 class="card-title">{{ project.title }}</h5>
                 <p class="card-text">{{ project.description }}</p>

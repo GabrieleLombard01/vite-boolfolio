@@ -35,6 +35,6 @@ ul li {
 
 /*Utilties*/
 .card {
-  height: 430px;
+  height: 530px;
 }
 </style>
